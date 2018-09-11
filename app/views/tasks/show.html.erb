@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>やること:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>説明:</strong>
+  <%= @task.description %>
+</p>
+
+<p>
+  <strong>締め切り:</strong>
+  <%= @task.due_date %>
+</p>
+
+<p>
+  <% if @task.done == true %>
+   <strong>おつかれ</strong>
+  <% else %>
+  <strong>がんばろ</strong>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
